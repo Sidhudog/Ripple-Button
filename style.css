@@ -1,0 +1,39 @@
+body{
+    height: 100vh;
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items:center;
+}
+
+
+#ripple{
+    background-color: red;
+    height: 60px;
+    width: 160px;
+    font-size:20px;
+    position: relative;
+    outline:none;
+}
+
+#ripple .circle{
+    background-color:white;
+    display:block;
+    position:absolute;
+    height: 60px;
+    border-radius: 50%;
+    width: 80px;
+    transform :translate(-50%,-50%) scale(0);  
+    animation : scaling 0.5s ease-out;
+    /* transform : scale(2,2); */
+}
+
+
+@keyframes scaling {
+    to{
+    transform :translate(-50%,-50%) scale(3);
+      opacity: 0.1;
+    }
+}
+
+
